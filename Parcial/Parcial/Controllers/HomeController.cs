@@ -20,11 +20,26 @@ namespace Parcial.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Agenda()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Agenda Electronica";
 
             return View();
         }
+
+        public ActionResult Asignaturas()
+        {
+            ViewBag.Message = "Asignaturas";
+
+            return View();
+        }
+
+        public ActionResult Lector()
+        {
+            ViewBag.Message = "Lector de Archivos";
+
+            return View();
+        }
+
     }
 }

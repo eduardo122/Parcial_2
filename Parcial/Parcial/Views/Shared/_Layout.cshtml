@@ -9,26 +9,22 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Segundo Parcial", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <div id="header" class="container">
+        <div class="nav justify-content-center">
+            <img src="~/img/logo.png" alt="Logo" class="logo" />
         </div>
+        <ul class="nav justify-content-center" id="nav">
+            <li>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "nav-link font-weight-bold ml-3" })</li>
+            <li>@Html.ActionLink("Asignaturas", "Asignaturas", "Home", new { @class = "nav-link font-weight-bold ml-3" })</li>
+            <li>@Html.ActionLink("Agenda electrónica", "Agenda", "Home", new { @class = "nav-link font-weight-bold ml-3" })</li>
+            <li>@Html.ActionLink("Lector de Archivos", "Lector", "Home", new { @class = "nav-link font-weight-bold ml-3" })</li>
+            <li>@Html.ActionLink("Acerca de", "About", "Home", new { @class = "nav-link font-weight-bold ml-3" })</li>
+        </ul>
     </div>
-    <!---->
+
+
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
